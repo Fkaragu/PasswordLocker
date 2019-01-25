@@ -1,7 +1,7 @@
 import unittest # Importing the unittest module
-from userClass import User # Importing the User class
+from userCredential import Credential # Importing the User class
 
-class TestUser(unittest.TestCase):
+class TestCredential(unittest.TestCase):
 
     '''
     Test class that defines test cases for the user class behaviours.
@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.user_list = User("Francis","Karagu","0712345678","fkaragu@gmail.com") # create contact object
+        self.credential_list = Credential("Instagram","FTKaragu","123456") # create contact object
 
 
     def test_init(self):
@@ -23,10 +23,10 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.user_list.first_name,"Francis")
-        self.assertEqual(self.user_list.last_name,"Karagu")
-        self.assertEqual(self.user_list.phone_number,"0712345678")
-        self.assertEqual(self.user_list.email,"fkaragu@gmail.com")
+        self.assertEqual(self.credential_list.platform,"Instagram")
+        self.assertEqual(self.credential_list.account_name,"FTKaragu")
+        self.assertEqual(self.credential_list.password,"123456")
+
 
 
 if __name__ == '__main__':
