@@ -6,6 +6,13 @@ class User:
 
     user_list = [] # Empty user list
 
+    def save_user(self):
+    User.user_list.append(self)
+
+    def delete_user(self):
+    User.user_list.remove(self)
+
+
     def __init__(self,first_name,last_name,number,email):
 
       # docstring removed for simplicity
