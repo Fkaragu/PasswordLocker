@@ -26,7 +26,17 @@ class User:
                     return True
 
                     return False
+    @classmethod
+         def display_contacts(cls):
 
+                return cls.user_list
+
+    @classmethod
+          def copy_email(cls,number):
+            contact_found = Contact.find_by_number(number)
+              pyperclip.copy(contact_found.email)
+
+                        
     def __init__(self,first_name,last_name,number,email):
 
       # docstring removed for simplicity
