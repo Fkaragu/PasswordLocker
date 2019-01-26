@@ -12,6 +12,13 @@ class User:
     def delete_user(self):
     User.user_list.remove(self)
 
+    @classmethod
+        def find_by_number(cls,number):
+
+            for contact in cls.user_list:
+                if contact.phone_number == number:
+                    return contact
+
 
     def __init__(self,first_name,last_name,number,email):
 
