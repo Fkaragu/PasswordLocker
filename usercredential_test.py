@@ -28,6 +28,5 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.credential_list.password,"123456")
 
 
-
 if __name__ == '__main__':
     unittest.main()
