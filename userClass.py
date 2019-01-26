@@ -18,7 +18,14 @@ class User:
             for contact in cls.user_list:
                 if contact.phone_number == number:
                     return contact
+    @classmethod
+        def contact_exist(cls,number):
 
+            for contact in cls.user_list:
+                if contact.phone_number == number:
+                    return True
+
+                    return False
 
     def __init__(self,first_name,last_name,number,email):
 
