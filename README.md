@@ -53,7 +53,6 @@ You have to log in on the Terminal then
 * Use phone number to find a specific user with that number.
 * Exit once user is done.
 
-
 ## Known Bugs
 
    NO bugs present.
