@@ -221,6 +221,9 @@ def main():
 
                 print('\n')
 
+        elif short_code == "de":
+
+            print("Starting to delete .......")
         elif short_code == "ex":
 
             print("Bye .......")
