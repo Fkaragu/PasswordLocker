@@ -149,22 +149,36 @@ def main():
 
         elif short_code == 'sa':
 
-             print ("Enter Email Address ....")
-             e_mail = input()
+            print("Do you want password to auto-generate.. Options: YY -- Yes and NN -- No")
 
-             print("Platform Account ...")
-             p_account = input()
+            pass_auto = input().lower()
 
-             print("Enter Password ...")
-             p_word = input()
+            if pass_auto == 'yy':
+                print("Password will be auto generated")
 
-             save_credential(create_credential(e_mail,p_account,p_word))
+            elif pass_auto =='nn':
 
-             print ('\n')
+                print ("Enter Email Address ....")
+                e_mail = input()
 
-             print(f" New Credential for {e_mail} {p_account} created")
+                print("Platform Account ...")
+                p_account = input()
 
-             print ('\n')
+                print("Enter Password ...")
+                p_word = input()
+
+                save_credential(create_credential(e_mail,p_account,p_word))
+
+                print ('\n')
+
+                print(f" New Credential for {e_mail} {p_account} created")
+
+                print ('\n')
+
+            else:
+                print("Wrong option try again")
+
+
 
 
 
