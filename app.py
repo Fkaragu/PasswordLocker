@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from user import User
+
 from credential import Credential
 
 def create_user(fname,lname,phone,email):
@@ -72,7 +73,7 @@ def main():
 
     while True:
 
-        print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, ex -exit the user list ")
+        print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, sa -Create social account, ex -exit the user list ")
 
         short_code = input().lower()
 
@@ -145,6 +146,28 @@ def main():
             else:
 
                  print("That user does not exist")
+
+        elif short_code == 'sa':
+
+             print ("Enter Email Address ....")
+             e_mail = input()
+
+             print("Platform Account ...")
+             p_account = input()
+
+             print("Enter Password ...")
+             p_word = input()
+
+             save_credential(create_credential(e_mail,p_account,p_word))
+
+             print ('\n')
+
+             print(f" New Credential for {e_mail} {p_account} created")
+
+             print ('\n')
+
+
+
 
         elif short_code == "ex":
 
