@@ -73,7 +73,14 @@ def main():
 
     while True:
 
-        print("Use these short codes : CU - Create a New User, DU - Display Users, FU -Find a User, CA -Create Social Account, DA -Display Social Account, DE -Delete Social Account, EX - Exit the list")
+        print("Use these short codes : ")
+        print("CU - Create a New User")
+        print("DU - Display Users")
+        print("FU - Find a User")
+        print("CA - Create Social Account")
+        print("DA - Display Social Account")
+        print("DE - Delete Social Account")
+        print("EX - Exit the list")
 
         short_code = input().lower()
 
