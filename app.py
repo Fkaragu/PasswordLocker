@@ -3,15 +3,22 @@ from user import User
 
 from credential import Credential
 
-def create_user(fname,lname,phone,email):
+def create_user(fname,lname,phone,email,password):
 
-    new_user = User(fname,lname,phone,email)
+    new_user = User(fname,lname,phone,email,password)
     return new_user
 
 def create_credential(email,platform,password):
 
     new_credential = Credential(email,platform,password)
     return new_credential
+
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	gen_pass = Credential.generate_password()
+	return gen_pass
 
 def save_users(user):
 
@@ -101,7 +108,10 @@ def main():
             print("Email address ...")
             e_address = input()
 
-            save_users(create_user(f_name,l_name,p_number,e_address))
+            print("Password ...")
+            e_pass = input()
+
+            save_users(create_user(f_name,l_name,p_number,e_address,e_pass))
 
             print ('\n')
 
@@ -165,6 +175,22 @@ def main():
 
             if pass_auto == 'yy':
                 print("Password will be auto generated")
+                print ("Enter Email Address (Username)....")
+                e_mail = input()
+
+                print("Platform Account (Social Account)...")
+                p_account = input()
+
+                print("Enter Password ...")
+                p_word = generate_password()
+
+                save_credential(create_credential(e_mail,p_account,p_word))
+
+                print ('\n')
+
+                print(f" New Credential for {e_mail} {p_account} created. Password is {p_word}")
+
+                print ('\n')
 
             elif pass_auto =='nn':
 
@@ -181,7 +207,7 @@ def main():
 
                 print ('\n')
 
-                print(f" New Credential for {e_mail} {p_account} created")
+                print(f" New Credential for {e_mail} {p_account} created. Password is {p_word}")
 
                 print ('\n')
 
@@ -210,7 +236,6 @@ def main():
                 for credential in display_credential():
 
                         print(f"{credential.email} {credential.platform} .....{credential.password}")
-
                         print('\n')
 
             else:

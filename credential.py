@@ -1,4 +1,6 @@
 import pyperclip
+import string
+import random
 class Credential:
     """
     Class that generates new instances of credentials.
@@ -14,6 +16,12 @@ class Credential:
     def delete_credential(self):
 
         Credential.credential_list.remove(self)
+
+    def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+
+        gen_pass=''.join(random.choice(char) for _ in range(size))
+
+        return gen_pass
 
     @classmethod
     def find_by_email(cls,number):

@@ -16,20 +16,20 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_number(cls,number):
-
-        for user in cls.user_list:
-            if user.phone_number == number:
-                return user
-
-    @classmethod
     def user_exist(cls,number):
 
         for user in cls.user_list:
             if user.phone_number == number:
                     return True
-
+                    
         return False
+
+    @classmethod
+    def find_by_number(cls,number):
+
+        for user in cls.user_list:
+            if user.phone_number == number:
+                return user
 
     @classmethod
     def display_users(cls):
@@ -42,9 +42,7 @@ class User:
         pyperclip.copy(user_found.email)
 
 
-
-
-    def __init__(self,first_name,last_name,phone_number,email):
+    def __init__(self,first_name,last_name,phone_number,email,password):
 
       # docstring removed for simplicity
 
@@ -52,3 +50,4 @@ class User:
         self.last_name = last_name
         self.phone_number = phone_number
         self.email = email
+        self.password = password

@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.user_list = User("Francis","Karagu","0712345678","fkaragu@gmail.com") # create contact object
+        self.user_list = User("Francis","Karagu","0712345678","fkaragu@gmail.com","password") # create contact object
 
 
     def test_init(self):
@@ -27,6 +27,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.user_list.last_name,"Karagu")
         self.assertEqual(self.user_list.phone_number,"0712345678")
         self.assertEqual(self.user_list.email,"fkaragu@gmail.com")
+        self.assertEqual(self.user_list.password,"password")
 
 
 if __name__ == '__main__':
