@@ -5,7 +5,7 @@ class User:
     """
     pass
 
-    user_list = [] # Empty user listz
+    user_list = [] # Empty user lists
 
     def save_user(self):
 
