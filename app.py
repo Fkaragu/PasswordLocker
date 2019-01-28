@@ -25,9 +25,9 @@ def del_user(user):
 
     user.delete_user()
 
-def delete_credential(user):
+def delete_credential(credential):
 
-    user.delete_credential()
+    credential.delete_credential()
 
 def find_user(number):
 
@@ -224,6 +224,11 @@ def main():
         elif short_code == "de":
 
             print("Starting to delete .......")
+            print("Enter Email .......")
+            del_name = input(" ")
+
+            delete_credential(del_name)
+
         elif short_code == "ex":
 
             print("Bye .......")
