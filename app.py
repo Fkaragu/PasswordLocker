@@ -84,7 +84,7 @@ def main():
 
         short_code = input().lower()
 
-        if short_code == 'cu':
+        if short_code   == 'cu':
 
             print("New User")
             print("-"*10)
@@ -200,6 +200,26 @@ def main():
 
                 pass_auto = input().lower()
 
+        elif short_code == 'da':
+
+            if display_credential():
+                print("Here is a list of all your credential")
+
+                print('\n')
+
+                for credential in display_credential():
+
+                        print(f"{credential.email} {credential.platform} .....{credential.password}")
+
+                        print('\n')
+
+            else:
+
+                print('\n')
+
+                print("You don't seem to have any credentials saved yet")
+
+                print('\n')
 
         elif short_code == "ex":
 
