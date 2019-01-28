@@ -73,11 +73,11 @@ def main():
 
     while True:
 
-        print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, sa -Create social account, ex -exit the user list ")
+        print("Use these short codes : CU - Create a New User, DU - Display Users, FU -Find a User, CA -Create Social Account, DA -Display Social Account, DE -Delete Social Account, EX - Exit the list")
 
         short_code = input().lower()
 
-        if short_code == 'cc':
+        if short_code == 'cu':
 
             print("New User")
             print("-"*10)
@@ -102,7 +102,7 @@ def main():
 
             print ('\n')
 
-        elif short_code == 'dc':
+        elif short_code == 'du':
 
             if display_users():
 
@@ -124,7 +124,7 @@ def main():
 
                 print('\n')
 
-        elif short_code == 'fc':
+        elif short_code == 'fu':
 
             print("Enter the number you want to search for")
 
@@ -147,9 +147,9 @@ def main():
 
                  print("That user does not exist")
 
-        elif short_code == 'sa':
+        elif short_code == 'ca':
 
-            print("Do you want password to auto-generate.. Options: YY -- Yes and NN -- No")
+            print("Do you want password to auto-generate.. Options: YY -- Yes, NN -- No and EX -exit the Social Accounts")
 
             pass_auto = input().lower()
 
@@ -158,10 +158,10 @@ def main():
 
             elif pass_auto =='nn':
 
-                print ("Enter Email Address ....")
+                print ("Enter Email Address (Username)....")
                 e_mail = input()
 
-                print("Platform Account ...")
+                print("Platform Account (Social Account)...")
                 p_account = input()
 
                 print("Enter Password ...")
@@ -175,12 +175,17 @@ def main():
 
                 print ('\n')
 
+            elif pass_auto == "ex":
+
+                print("Bye .......")
+
+
             else:
                 print("Wrong option try again")
 
+                print("Do you want password to auto-generate.. Options: YY -- Yes, NN -- No and ex -exit the Social Accounts")
 
-
-
+                pass_auto = input().lower()
 
 
         elif short_code == "ex":
