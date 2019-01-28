@@ -156,7 +156,10 @@ def main():
 
         elif short_code == 'ca':
 
-            print("Do you want password to auto-generate.. Options: YY -- Yes, NN -- No and EX -exit the Social Accounts")
+            print("Do you want password to auto-generate.. Use below options")
+            print("Option 1: YY -- Yes")
+            print("Option 2: NN -- No")
+            print("Option 3: EX -- Exit the Social Accounts")
 
             pass_auto = input().lower()
 
@@ -190,7 +193,10 @@ def main():
             else:
                 print("Wrong option try again")
 
-                print("Do you want password to auto-generate.. Options: YY -- Yes, NN -- No and ex -exit the Social Accounts")
+                print("Do you want password to auto-generate.. Use below options")
+                print("Option 1: YY -- Yes")
+                print("Option 2: NN -- No")
+                print("Option 3: EX -- Exit the Social Accounts")
 
                 pass_auto = input().lower()
 
