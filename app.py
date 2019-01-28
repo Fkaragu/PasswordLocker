@@ -1,34 +1,64 @@
 #!/usr/bin/env python3.6
 from user import User
+from credential import Credential
 
 def create_user(fname,lname,phone,email):
 
     new_user = User(fname,lname,phone,email)
     return new_user
 
+def create_credential(email,platform,password):
+
+    new_credential = Credential(email,platform,password)
+    return new_credential
+
 def save_users(user):
 
     user.save_user()
+
+def save_credential(credential):
+
+    credential.save_credential()
 
 def del_user(user):
 
     user.delete_user()
 
+def delete_credential(user):
+
+    user.delete_credential()
+
 def find_user(number):
 
     return User.find_by_number(number)
+
+def find_credential(number):
+
+    return Credential.find_by_email(number)
 
 def check_existing_users(number):
 
     return User.user_exist(number)
 
+def check_existing_credential(number):
+
+    return Credential.credential_exist(number)
+
 def display_users():
 
     return User.display_users()
 
+def display_credential():
+
+    return Credential.display_credential()
+
 def test_copy_email():
 
     return User.copy_email()
+
+def test_copy_email():
+
+    return Credential.copy_email()
 
 def main():
 
